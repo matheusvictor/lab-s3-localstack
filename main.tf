@@ -1,11 +1,13 @@
 # Definição do provedor que será utilizado, neste caso, o AWS.
 provider "aws" {
-  access_key        = "foo"
-  secret_key        = "bar"
-  region            = "us-east-1" # Definição da região em que o bucket S3 será criado.
-  s3_use_path_style = true # Define que o caminho de acesso do S3 será usado ao invés do subdomíni
-  #   skip_metadata_api_check     = true
-  #   skip_requesting_account_id  = true
+  profile                     = "default"
+  access_key                  = "foo"
+  secret_key                  = "bar"
+  region                      = "us-east-1" # Definição da região em que o bucket S3 será criado.
+  s3_force_path_style         = true # Define que o caminho de acesso do S3 será usado ao invés do subdomínio
+  skip_credentials_validation = true
+  skip_metadata_api_check     = true
+  skip_requesting_account_id  = true
 
   # Define os endpoints da API do AWS. Neste caso, apenas o endpoint S3 está definido.
   endpoints {
