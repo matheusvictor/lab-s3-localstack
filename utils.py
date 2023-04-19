@@ -48,7 +48,7 @@ def fazer_upload_objeto(s3_client, diretorio='./assets/my-file.txt', nome='my-fi
 
 
 def executar_obj_audio(s3_client):
-    obj = s3_client.get_object(Bucket=BUCKET_NAME, Key='musica.mp3')  # Carrega o arquivo de áudio no Pygame mixer
+    obj = s3_client.get_object(Bucket=BUCKET_NAME, Key='audio.mp3')  # Carrega o arquivo de áudio no Pygame mixer
     audio_data = obj['Body'].read()
 
     pygame.init()  # Inicia o módulo pygame
