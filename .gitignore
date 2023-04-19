@@ -1,3 +1,5 @@
 .idea
 /venv/
 /.aws/
+/.terraform/
+/.terraform.lock.hcl
